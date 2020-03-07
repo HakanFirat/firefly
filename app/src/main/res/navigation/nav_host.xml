@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@+id/fragmentSplash">
+
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="com.example.fireflyhakanfirat.ui.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_fragmentSplash_to_fragmentLogin"
+            app:destination="@id/fragmentLogin"
+            app:popUpTo="@+id/fragmentSplash"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.fireflyhakanfirat.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentRegister"
+            app:destination="@id/fragmentRegister"/>
+
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentUserList"
+            app:destination="@id/fragmentUserList"
+            app:popUpTo="@+id/fragmentLogin"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentRegister"
+        android:name="com.example.fireflyhakanfirat.ui.register.RegisterFragment"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentUserList"
+            app:destination="@id/fragmentUserList"
+            app:popUpTo="@+id/fragmentLogin"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentUserList"
+        android:name="com.example.fireflyhakanfirat.ui.userlist.UserListFragment"
+        tools:layout="@layout/fragment_user_list">
+
+        <action
+            android:id="@+id/action_fragmentUserList_to_fragmentUserDetail"
+            app:destination="@id/fragmentUserDetail"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentUserDetail"
+        android:name="com.example.fireflyhakanfirat.ui.userdetail.UserDetailFragment"
+        tools:layout="@layout/fragment_user_detail">
+
+    </fragment>
+
+</navigation>

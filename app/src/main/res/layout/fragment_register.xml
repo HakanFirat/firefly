@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/registerImageView"
+        android:layout_width="300dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/register_img"
+        android:scaleType="fitXY"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/registerImageView">
+
+        <EditText
+            android:id="@+id/registerEmailEditText"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/registerPasswordEditText"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/registerButton"
+            style="@style/BlackButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/register_text"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

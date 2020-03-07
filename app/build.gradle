@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.fireflyhakanfirat"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    // KOTLIN
+    implementation rootProject.ext.kotlin
+    implementation rootProject.ext.kotlinExt
+
+
+    // INJECTION
+    implementation rootProject.ext.dagger
+    implementation rootProject.ext.daggerAndroid
+    implementation rootProject.ext.daggerAndroidSupport
+    implementation rootProject.ext.legacySupport
+    kapt rootProject.ext.daggerAndroidProcessor
+    kapt rootProject.ext.daggerCompiler
+
+    // ANDROID SUPPORT
+    implementation rootProject.ext.appcompat
+    implementation rootProject.ext.legacySupport
+    implementation rootProject.ext.constraintLayout
+
+    // LIFECYCLE
+    implementation rootProject.ext.lifecycleExt
+    kapt rootProject.ext.lifecycleComplier
+
+    // NAVIGATION
+    implementation rootProject.ext.navUI
+    implementation rootProject.ext.navFragment
+
+    // DATABASE
+    implementation rootProject.ext.room
+    kapt rootProject.ext.roomCompiler
+    testImplementation rootProject.ext.roomTest
+
+    // NETWORKING
+    implementation rootProject.ext.retrofit
+    implementation rootProject.ext.retrofitGsonConverter
+    implementation rootProject.ext.okHttp
+    implementation rootProject.ext.okHttpLoggingInterceptor
+
+    // IMAGE
+    implementation rootProject.ext.picasso
+    implementation rootProject.ext.picassoOkhttpDownloader
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation rootProject.ext.androidxCoreTesting
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/avatarImageView">
+
+        <EditText
+            android:id="@+id/nameEditText"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:padding="10dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/jobEditText"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/job"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
+            android:enabled="false"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/fullNameEditText"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fullName"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:enabled="false"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_unselected"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/deleteButton"
+                style="@style/BlackButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="@string/delete"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
